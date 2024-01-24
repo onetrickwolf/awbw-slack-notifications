@@ -110,7 +110,8 @@ function notifySlack(message, gameId) {
     }
 
     const slackMessage = {
-        user: slackEmail, message: `it's your turn for *${gameName}*! https://awbw.amarriner.com/game.php?games_id=${gameId}`,
+        user: slackEmail, gameName: `${gameName}`,
+        link: `https://awbw.amarriner.com/game.php?games_id=${gameId}`,
     };
 
     console.log(slackMessage);

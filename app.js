@@ -97,6 +97,12 @@ function notifySlack(message, gameId) {
         return;
     }
 
+    const gameName = gameMapping["name"];
+    if (!gameName) {
+        console.error(`No game name found for game ID: ${gameId}`);
+        return;
+    }
+
     const slackEmail = config.userMapping[gameUsername];
     if (!slackEmail) {
         console.error(`No Slack email found for username: ${gameUsername}`);
@@ -104,7 +110,7 @@ function notifySlack(message, gameId) {
     }
 
     const slackMessage = {
-        user: slackEmail, message: `it's your turn! https://awbw.amarriner.com/game.php?games_id=${gameId}`,
+        user: slackEmail, message: `it's your turn for *${gameName}*! https://awbw.amarriner.com/game.php?games_id=${gameId}`,
     };
 
     console.log(slackMessage);

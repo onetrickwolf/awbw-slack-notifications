@@ -12,6 +12,7 @@ module.exports = {
     // Game specific ID to username mapping, snippet in readme to autogenerate
     gameMappings: {
         '123456': {
+            "name": "game1",
             "playerId1": "userA",
             "playerId2": "userB",
             "playerId3": "userC",

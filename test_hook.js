@@ -12,6 +12,6 @@ function test(message) {
 }
 
 test({
-    user: 'userA@example.com',
-    message: "it's your turn! https://awbw.amarriner.com/game.php?games_id=123456"
+    user: "test@example.com", gameName: `Some Game`,
+    link: `https://awbw.amarriner.com/game.php?games_id=123456`,
 });
